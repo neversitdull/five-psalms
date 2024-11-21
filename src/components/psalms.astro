@@ -1,0 +1,34 @@
+---
+
+---
+
+<div>
+  <h2
+    id="date-display"
+    class="text-sm text-neutral-800 dark:text-neutral-400 font-mono pb-2 font-medium"
+  >
+    Loading...
+  </h2>
+  <section
+    id="psalm-container"
+    class="grid grid-cols-1 divide-y min-[300px]:divide-y-0 min-[300px]:divide-x min-[300px]:grid-cols-5 divide-inherit divide-dashed border rounded-md border-neutral-300 dark:border-neutral-700 bg-neutral-50 dark:bg-neutral-900"
+  >
+    {
+      [...Array(5)].map((_, index) => (
+        <div class="flex flex-col justify-center align-center py-4 px-2 sm:px-4 text-center">
+          <p
+            class="number text-md min-w-[3ch] font-mono font-medium text-neutral-800 dark:text-neutral-300"
+            data-psalm-index={index}
+          >
+            -
+          </p>
+        </div>
+      ))
+    }
+  </section>
+</div>
+
+<script>
+  import { initPsalms } from "../scripts/psalms";
+  initPsalms();
+</script>

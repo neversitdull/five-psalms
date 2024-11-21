@@ -1,0 +1,48 @@
+---
+import Analytics from '@vercel/analytics/astro';
+
+import "@fontsource/geist-mono";
+import "@fontsource/geist-sans";
+
+const title = "Five Psalms";
+const description =
+  "Read through the Psalms each month. 150 Psalms. 30 days. 5 Psalms a day.";
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+
+    <meta name="title" content={title} />
+    <meta name="description" content={description} />
+
+    <!-- OpenGraph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://fivepsalms.com" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content="/og-image.png" />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://fivepsalms.com" />
+    <meta property="twitter:title" content={title} />
+    <meta property="twitter:description" content={description} />
+    <meta property="twitter:image" content="/og-image.png" />
+
+    <title>{title}</title>
+
+    <Analytics />
+  </head>
+
+  <body
+    class="flex flex-col items-center justify-center min-h-svh bg-neutral-100 dark:bg-neutral-950"
+  >
+    <main class="flex flex-col justify-center gap-10 font-sans py-4 px-8">
+      <slot />
+    </main>
+  </body>
+</html>
