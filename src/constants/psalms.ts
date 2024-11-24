@@ -30,12 +30,12 @@ export const STATIC_PSALMS = [
   [28, 58, 88, 118, 148],
   [29, 59, 89, 119, 149],
   [30, 60, 90, 120, 150],
-] as const;
+] as const
 
 export function getRandomPsalms() {
-  const psalms = new Set<number>();
+  const psalms = new Set<number>()
   while (psalms.size < 5) {
-    psalms.add(Math.floor(Math.random() * 150) + 1);
+    psalms.add(Math.floor(Math.random() * 150) + 1)
   }
-  return Array.from(psalms).sort((a, b) => a - b);
+  return Array.from(psalms).sort((a, b) => a - b)
 }
