@@ -1,0 +1,14 @@
+@import "tailwindcss";
+
+@theme {
+  --font-*: initial;
+  --font-sans: "Geist Sans", "sans-serif";
+  --font-mono: "Geist Mono", "mono";
+
+  --text-*: initial;
+  --text-sm: clamp(0.9rem, 0.3vi + 0.8rem, 1rem);
+  --text-base: clamp(1rem, 0.34vi + 0.91rem, 1.19rem);
+  --text-md: clamp(1.25rem, 0.61vi + 1.1rem, 1.58rem);
+  --text-lg: clamp(2rem, 2vi + 1.85rem, 2.75rem);
+  --text-xl: clamp(4.77rem, 7.48vi + 2.9rem, 8.88rem);
+}
