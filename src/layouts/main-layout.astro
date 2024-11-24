@@ -1,13 +1,12 @@
 ---
-import Analytics from "@vercel/analytics/astro";
-import "../styles/tailwind.css";
+import "../styles/tailwind.css"
 
-import "@fontsource/geist-mono";
-import "@fontsource/geist-sans";
+import "@fontsource/geist-mono"
+import "@fontsource/geist-sans"
 
-const title = "Five Psalms";
+const title = "Five Psalms"
 const description =
-  "Read through the Psalms each month. 150 Psalms. 30 days. 5 Psalms a day.";
+  "Read through the Psalms each month. 150 Psalms. 30 days. 5 Psalms a day."
 ---
 
 <html lang="en">
@@ -34,14 +33,16 @@ const description =
     <meta property="twitter:description" content={description} />
     <meta property="twitter:image" content="/og-image.png" />
 
+    <script
+      is:inline
+      type="text/partytown"
+      src="https://cloud.umami.is/script.js"
+      data-website-id="6daac69a-ea7c-412a-9e67-dccf024b3d87"></script>
     <title>{title}</title>
-
-    <Analytics />
   </head>
 
   <body
-    class="flex flex-col items-center justify-center min-h-svh bg-neutral-100 dark:bg-neutral-950"
-  >
+    class="flex flex-col items-center justify-center min-h-svh bg-neutral-100 dark:bg-neutral-950">
     <main class="flex flex-col justify-center gap-10 font-sans py-4 px-8">
       <slot />
     </main>
