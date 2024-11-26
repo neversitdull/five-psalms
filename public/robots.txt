@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://fivepsalms.com/sitemap-index.xml
