@@ -35,7 +35,7 @@ export function initPsalms() {
       const index = parseInt(element.dataset.psalmIndex ?? "0");
       const psalmNumber = todaysPsalms[index];
       element.textContent = psalmNumber.toString();
-      element.href = `https://www.bible.com/bible/111/PSA.${psalmNumber}.NIV`;
+      element.href = `https://www.bible.com/bible/111/PSA.${psalmNumber}`;
     });
   }
 }
