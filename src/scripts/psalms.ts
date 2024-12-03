@@ -29,11 +29,13 @@ export function initPsalms() {
     document.getElementById("date-display")!.textContent = fullDate;
 
     // Update psalm numbers
-    const numbers =
-      container.querySelectorAll<HTMLElement>("[data-psalm-index]");
-    numbers.forEach((element) => {
+    const links =
+      container.querySelectorAll<HTMLAnchorElement>("[data-psalm-index]");
+    links.forEach((element) => {
       const index = parseInt(element.dataset.psalmIndex ?? "0");
-      element.textContent = todaysPsalms[index].toString();
+      const psalmNumber = todaysPsalms[index];
+      element.textContent = psalmNumber.toString();
+      element.href = `https://www.bible.com/bible/111/PSA.${psalmNumber}.NIV`;
     });
   }
 }
