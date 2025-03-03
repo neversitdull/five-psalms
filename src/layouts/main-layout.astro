@@ -1,15 +1,14 @@
 ---
-import "../styles/tailwind.css";
+import "../styles/tailwind.css"
 
-import "@fontsource/geist-mono";
-import "@fontsource/geist-sans";
+import "@fontsource/geist-mono"
+import "@fontsource/geist-sans"
 
-import Analytics from "@vercel/analytics/astro";
-import SpeedInsights from "@vercel/speed-insights/astro";
+import Analytics from "@vercel/analytics/astro"
 
-const title = "Five Psalms";
+const title = "Five Psalms"
 const description =
-  "Read through the Psalms each month. 150 Psalms. 30 days. 5 Psalms a day.";
+  "Read through the Psalms each month. 150 Psalms. 30 days. 5 Psalms a day."
 ---
 
 <html lang="en">
@@ -41,16 +40,13 @@ const description =
 
     <title>{title}</title>
     <Analytics />
-    <SpeedInsights />
   </head>
 
   <body
-    class="flex flex-col items-center justify-center min-h-svh bg-neutral-100 dark:bg-neutral-950"
-  >
+    class="flex flex-col items-center justify-center min-h-svh bg-neutral-100 dark:bg-neutral-950">
     <main
       role="main"
-      class="flex flex-col justify-center gap-10 font-sans py-4 px-8"
-    >
+      class="flex flex-col justify-center gap-10 font-sans py-4 px-8">
       <slot />
     </main>
   </body>
