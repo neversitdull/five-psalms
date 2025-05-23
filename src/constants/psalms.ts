@@ -32,10 +32,10 @@ export const STATIC_PSALMS = [
   [30, 60, 90, 120, 150],
 ] as const
 
-export function getRandomPsalms() {
+export function getRandomPsalms(): number[] {
   const psalms = new Set<number>()
   while (psalms.size < 5) {
-    psalms.add(Math.floor(Math.random() * 150) + 1)
+    psalms.add(((Math.random() * 150) | 0) + 1)
   }
-  return Array.from(psalms).sort((a, b) => a - b)
+  return [...psalms].sort((a, b) => a - b)
 }
