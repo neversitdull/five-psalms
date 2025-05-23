@@ -1,9 +1,9 @@
 @import "tailwindcss";
 
-@theme {
+@theme inline {
   --font-*: initial;
-  --font-sans: "Geist Sans", "sans-serif";
-  --font-mono: "Geist Mono", "mono";
+  --font-sans: var(--font-geist);
+  --font-mono: var(--font-geist-mono);
 
   --text-*: initial;
   --text-sm: clamp(0.9rem, 0.3vi + 0.8rem, 1rem);
